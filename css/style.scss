@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import "_common.scss";
+
+/*
+layout
+ */
+//common
+%bottom30 {
+  margin-bottom: 30px;
+}
+
+//wrapper
+#wrapper {
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+  color: $baseFontColor;
+  font-size: $baseFontSise;
+  background-color: $bgColor;
+  overflow: hidden;
+}
+
+//header
+#header {
+  #globalNav ul {
+    overflow: hidden;
+    li a {
+      display: block;
+      height: 60px;
+      width: 33.3333%;
+      float: left;
+      background: #eee;
+      &:hover {
+        opacity: $opacity;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+
+  }
+
+}
+
+#content {
+  overflow: hidden;
+
+}
+
+#main {
+  overflow: hidden;
+  width: 80%;
+  float: right;
+  margin-bottom: 20px;
+
+  h1 {
+    margin: 0px;
+    padding: 10px 2%;
+    font-size: $h1;
+
+  }
+  #mainVisual {
+    padding: 15%;
+    background: red;
+  }
+
+  #mainContent {
+
+    .posts {
+      @extend %bottom30;
+    }
+
+    .posts h2 {
+      font-size: $h2;
+    }
+    .post {
+      color: $red;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    float: none;
+  }
+}
+
+#aside {
+  overflow: hidden;
+  width: 20%;
+  float: left;
+  @media screen and (max-width: 900px) {
+    float: none;
+
+  }
+
+}
+
+#footer {
+  text-align: center;
+  padding: 10px 20%;
+}
+
+$val: false;
+@mixin style {
+  @if $val {
+    margin: 10px;
+  } @else {
+    @warn "警告";
+  }
+}
+
+.style {
+  @include style;
+}
+
+
