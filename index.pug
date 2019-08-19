@@ -26,6 +26,39 @@ html(lang="ja")
         | pタグの続きです
 
 
+-
+  $(function () {
+
+              function start(callback) {
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                console.log("2");
+                callback();
+
+              }
+
+              function callback_01(callback) {
+                console.log("4");
+
+              }
+
+
+              start(callback_01);
+
+
+            });
+
+
+
+
+
+
 
 
 
