@@ -1,16 +1,16 @@
 {
-  "name": "www",
+  "name": "hisashi-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean",
+    "sass": "node-sass --include-path scss css/style.scss ./dist/css/style.css"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.1"
+  "author": "hisashi",
+  "dependencies": {
+    "node-sass": "^4.12.0"
   }
 }
